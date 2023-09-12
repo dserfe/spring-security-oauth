@@ -9,6 +9,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.Map;
 
 import org.junit.After;
@@ -269,7 +270,7 @@ public class JdbcClientDetailsServiceTests {
 
 		String[] redirectURI = { "http://localhost:8080",
 				"http://localhost:9090" };
-		clientDetails.setRegisteredRedirectUri(new HashSet<String>(Arrays
+		clientDetails.setRegisteredRedirectUri(new LinkedHashSet<String>(Arrays
 				.asList(redirectURI)));
 
 		service.updateClientDetails(clientDetails);
